@@ -1,1 +1,248 @@
+/* Reset & Base Style */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
 
+body {
+  background-color: #0b0c10;
+  color: #c5c6c7;
+  line-height: 1.6;
+}
+
+/* Navbar */
+header {
+  background-color: #1f2833;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0, 255, 204, 0.1);
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1.2rem 2rem;
+}
+
+.logo {
+  color: #fff;
+  font-size: 1.6rem;
+  font-weight: 800;
+}
+
+.logo span {
+  color: #66fcf1;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links a {
+  color: #c5c6c7;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #66fcf1;
+}
+
+/* Hero Section */
+.hero {
+  background: linear-gradient(rgba(11, 12, 16, 0.85), rgba(11, 12, 16, 0.85)), url('https://via.placeholder.com/1500x800/1f2833/ffffff?text=Mobile+Legends+Gaming+Theme') center/cover no-repeat;
+  height: 85vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 1.5rem;
+}
+
+.hero-content h1 {
+  font-size: 2.5rem;
+  color: #fff;
+  margin-bottom: 1rem;
+  text-shadow: 0 0 10px rgba(102, 252, 241, 0.5);
+}
+
+.hero-content p {
+  font-size: 1.1rem;
+  max-width: 600px;
+  margin: 0 auto 2rem auto;
+}
+
+.btn {
+  display: inline-block;
+  background-color: #45a29e;
+  color: #fff;
+  padding: 0.9rem 2rem;
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: 800;
+  box-shadow: 0 0 15px rgba(102, 252, 241, 0.4);
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #66fcf1;
+  color: #0b0c10;
+  transform: scale(1.05);
+}
+
+/* Services Section */
+.services {
+  max-width: 1200px;
+  margin: 5rem auto;
+  padding: 0 2rem;
+  text-align: center;
+}
+
+.services h2, .why-us h2 {
+  font-size: 2rem;
+  color: #fff;
+  margin-bottom: 3rem;
+  position: relative;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.card {
+  background-color: #1f2833;
+  padding: 2.5rem 1.5rem;
+  border-radius: 12px;
+  border: 1px solid #45a29e;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+}
+
+.card.popular {
+  border: 2px solid #66fcf1;
+  box-shadow: 0 0 20px rgba(102, 252, 241, 0.2);
+}
+
+.badge {
+  position: absolute;
+  top: -12px;
+  right: 20px;
+  background-color: #66fcf1;
+  color: #0b0c10;
+  padding: 4px 12px;
+  font-size: 0.8rem;
+  font-weight: 800;
+  border-radius: 20px;
+}
+
+.card h3 {
+  color: #fff;
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+}
+
+.desc {
+  font-size: 0.9rem;
+  margin-bottom: 1.5rem;
+}
+
+.price {
+  font-size: 1.8rem;
+  color: #66fcf1;
+  font-weight: 800;
+  margin-bottom: 1.5rem;
+}
+
+.price span {
+  font-size: 0.9rem;
+  color: #c5c6c7;
+  font-weight: 400;
+}
+
+.card ul {
+  list-style: none;
+  text-align: left;
+  margin-bottom: 2rem;
+}
+
+.card ul li {
+  margin-bottom: 0.5rem;
+  font-size: 0.95rem;
+}
+
+.btn-card {
+  display: block;
+  background: transparent;
+  color: #66fcf1;
+  border: 2px solid #66fcf1;
+  padding: 0.7rem;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: 600;
+  transition: all 0.3s;
+}
+
+.btn-card:hover {
+  background-color: #66fcf1;
+  color: #0b0c10;
+}
+
+/* Why Us Section */
+.why-us {
+  background-color: #141821;
+  padding: 5rem 2rem;
+  text-align: center;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.feature-box {
+  background-color: #1f2833;
+  padding: 2rem;
+  border-radius: 8px;
+}
+
+.feature-box h3 {
+  color: #fff;
+  margin-bottom: 0.8rem;
+}
+
+/* Footer */
+footer {
+  background-color: #0b0c10;
+  border-top: 1px solid #1f2833;
+  text-align: center;
+  padding: 2rem 0;
+  font-size: 0.9rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 1.8rem;
+  }
+}
