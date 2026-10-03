@@ -307,5 +307,92 @@ footer {
 
   .services-grid {
     grid-template-columns: 1fr;
+
+   /* ==========================================
+   ORDER FORM SECTION
+   ========================================== */
+.order-section {
+  padding: 5rem 2rem;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.order-section h2 {
+  text-align: center;
+  font-size: 2rem;
+  color: #fff;
+  margin-bottom: 0.5rem;
+}
+
+.section-desc {
+  text-align: center;
+  color: #94a3b8;
+  margin-bottom: 2.5rem;
+  font-size: 0.95rem;
+}
+
+.form-container {
+  background: #161a23;
+  padding: 2.5rem;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-group label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #e2e8f0;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  background: #0d0f17;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  color: #fff;
+  font-size: 0.95rem;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: #ff4655;
+}
+
+.btn-submit {
+  width: 100%;
+  padding: 1rem;
+  background-color: #25d366;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-weight: 800;
+  font-size: 1rem;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 15px rgba(37, 211, 102, 0.3);
+  margin-top: 1rem;
+}
+
+.btn-submit:hover {
+  background-color: #1ebd59;
+  transform: translateY(-2px);
+  box-shadow: 0 0 25px rgba(37, 211, 102, 0.6);
+}
   }
 }
