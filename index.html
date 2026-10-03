@@ -78,6 +78,93 @@
     </div>
   </section>
 
+  <!-- Order Form Section -->
+  <section id="order-form" class="order-section">
+    <h2>Form Pemesanan Joki</h2>
+    <p class="section-desc">Isi data akun dan paket yang ingin diorder di bawah ini:</p>
+
+    <form id="jokiForm" class="form-container">
+      <div class="form-group">
+        <label for="userId">User ID & (Server)</label>
+        <input type="text" id="userId" placeholder="Contoh: 12345678 (2001)" required>
+      </div>
+
+      <div class="form-group">
+        <label for="nickname">Nickname Game</label>
+        <input type="text" id="nickname" placeholder="Contoh: JackhyKing" required>
+      </div>
+
+      <div class="form-group">
+        <label for="loginType">Jenis Login Akun</label>
+        <select id="loginType" required>
+          <option value="" disabled selected>-- Pilih Jenis Login --</option>
+          <option value="Moonton">Moonton</option>
+          <option value="VK">VK</option>
+          <option value="TikTok">TikTok</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="paket">Pilihan Paket Joki</label>
+        <select id="paket" required>
+          <option value="" disabled selected>-- Pilih Paket Rank --</option>
+          <option value="Master & Grandmaster (Rp 3.000/Bintang)">Master / Grandmaster - Rp 3.000/Bintang</option>
+          <option value="Epic & Legend (Rp 5.000/Bintang)">Epic / Legend - Rp 5.000/Bintang</option>
+          <option value="Mythic / Bintang Mythic (Rp 7.000/Bintang)">Mythic / Bintang Mythic - Rp 7.000/Bintang</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="jumlahBintang">Jumlah Bintang / Order</label>
+        <input type="number" id="jumlahBintang" placeholder="Contoh: 5" min="1" required>
+      </div>
+
+      <div class="form-group">
+        <label for="catatan">Catatan Tambahan (Opsional)</label>
+        <textarea id="catatan" rows="3" placeholder="Contoh: Utamakan hero Mage / Assassin"></textarea>
+      </div>
+
+      <button type="button" onclick="sendToWhatsApp()" class="btn-submit">Kirim Pemesanan via WhatsApp</button>
+    </form>
+  </section>
+
+  <!-- Script Otomatisasi WhatsApp -->
+  <script>
+    function sendToWhatsApp() {
+      // MASUKKAN NOMOR WHATSAPP ANDA DI SINI (Gunakan kode negara 62, contoh: 6281234567890)
+      const nomorWA = "6281234567890"; 
+
+      const userId = document.getElementById("userId").value;
+      const nickname = document.getElementById("nickname").value;
+      const loginType = document.getElementById("loginType").value;
+      const paket = document.getElementById("paket").value;
+      const jumlahBintang = document.getElementById("jumlahBintang").value;
+      const catatan = document.getElementById("catatan").value || "-";
+
+      if (!userId || !nickname || !loginType || !paket || !jumlahBintang) {
+        alert("Harap isi semua kolom form yang wajib diisi!");
+        return;
+      }
+
+      // Format Pesan WhatsApp
+     // Format Pesan WhatsApp (Menggunakan Backtick)
+      const pesan = `Halo Admin Jackhy_Shop, saya mau order joki MLBB dengan detail berikut:%0A%0A` +
+        `----------------------------------------%0A` +
+        `📌 *DATA PEMESANAN JOKI*%0A` +
+        `----------------------------------------%0A` +
+        `🎮 *User ID (Server):* ${userId}%0A` +
+        `👤 *Nickname:* ${nickname}%0A` +
+        `🔑 *Login via:* ${loginType}%0A` +
+        `📦 *Paket:* ${paket}%0A` +
+        `⭐ *Jumlah Bintang:* ${jumlahBintang}%0A` +
+        `📝 *Catatan:* ${catatan}%0A` +
+        `----------------------------------------%0A` +
+        `Mohon segera diproses dan diinfokan total pembayarannya. Terima kasih!`;
+
+      const url = `https://wa.me/${nomorWA}?text=${pesan}`;
+      window.open(url, "_blank");
+    }
+  </script>
   <!-- Why Us Section -->
   <section id="why-us" class="why-us">
     <h2>Mengapa Memilih Jackhy_Shop?</h2>
