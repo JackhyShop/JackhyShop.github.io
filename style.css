@@ -396,3 +396,85 @@ footer {
 }
   }
 }
+/* ==========================================
+   TESTIMONI PAGE STYLES
+   ========================================== */
+.hero-testimoni {
+  padding: 8rem 2rem 3rem;
+  text-align: center;
+  background: radial-gradient(circle at center, #1a1f2c 0%, #0d0f17 100%);
+}
+
+.hero-testimoni h1 {
+  font-size: 2.5rem;
+  color: #fff;
+  margin-bottom: 0.5rem;
+}
+
+.hero-testimoni p {
+  color: #94a3b8;
+  font-size: 1rem;
+}
+
+.testimoni-container {
+  padding: 4rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.testimoni-container h2 {
+  font-size: 1.8rem;
+  color: #fff;
+  margin-bottom: 3rem;
+}
+
+.testimoni-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.testimoni-card {
+  background: #161a23;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  transition: transform 0.3s ease;
+  text-align: left;
+}
+
+.testimoni-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(255, 70, 85, 0.4);
+}
+
+.testimoni-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.testimoni-info {
+  padding: 1.5rem;
+}
+
+.testimoni-info h3 {
+  font-size: 1.1rem;
+  color: #fff;
+  margin-bottom: 0.3rem;
+}
+
+.testimoni-info .status {
+  font-size: 0.85rem;
+  color: #25d366;
+  font-weight: 600;
+  margin-bottom: 0.8rem;
+}
+
+.testimoni-info .comment {
+  font-size: 0.9rem;
+  color: #cbd5e1;
+  font-style: italic;
+}
