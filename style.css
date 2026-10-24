@@ -97,3 +97,34 @@ footer{margin-top:30px;padding:26px 0;border-top:1px solid #12234f;background:#0
 .big .kn{height:340px;width:auto;filter:drop-shadow(0 0 30px #1d6bff88)}
 footer{background:linear-gradient(rgba(3,6,16,.78),rgba(3,6,16,.93)),url(images/malam.jpg) center/cover}
 @media(max-width:760px){.hero-art{opacity:.22;max-width:70%}.banner:has(.bart){padding-right:30px}.banner .bart{opacity:.2}}
+
+.gc.ff{min-height:230px}
+.gc .gart.bg{inset:0;right:auto;bottom:auto;width:100%;height:100%;max-width:none;object-fit:cover;object-position:70% 15%;-webkit-mask-image:linear-gradient(to right,transparent 20%,#000 62%);mask-image:linear-gradient(to right,transparent 20%,#000 62%)}
+
+.hero{padding:64px 0 56px}
+.hero::after{content:"";position:absolute;left:0;right:0;bottom:0;height:70px;background:linear-gradient(transparent,#050a17);z-index:1;pointer-events:none}
+.hero-art{width:min(34%,520px);height:auto;max-width:none;bottom:0}
+.hero-art.l{left:0;-webkit-mask-image:linear-gradient(to right,#000 55%,transparent);mask-image:linear-gradient(to right,#000 55%,transparent)}
+.hero-art.r{right:0;-webkit-mask-image:linear-gradient(to left,#000 55%,transparent);mask-image:linear-gradient(to left,#000 55%,transparent)}
+.lg{filter:drop-shadow(0 2px 6px rgba(0,0,0,.55))}
+.cta-row .lg{width:130px;height:auto}
+.feat{border-top:0;margin-top:0}
+.gc{min-height:230px}
+.gc .lg{width:190px;height:auto}
+.gc .gart:not(.bg){right:0;bottom:0;height:100%;width:auto;max-width:58%;object-fit:contain;object-position:right bottom;-webkit-mask-image:linear-gradient(to right,transparent,#000 35%);mask-image:linear-gradient(to right,transparent,#000 35%)}
+@media(max-width:760px){.hero-art{width:62%;opacity:.25}.gc .lg{width:150px}}
+
+/* ===== EFEK GRADASI HERO (versi neon) ===== */
+.hero{min-height:560px;display:flex;align-items:center;padding:70px 0;background:radial-gradient(60% 90% at 10% 60%,rgba(40,90,255,.6),transparent 70%),radial-gradient(60% 90% at 92% 60%,rgba(255,110,20,.55),transparent 70%),linear-gradient(180deg,rgba(5,10,23,.35),rgba(5,10,23,.92)),url(images/malam.jpg) center/cover}
+.hero .wrap{width:100%}
+.hero .wrap::before{content:"";position:absolute;inset:-30px 16%;background:radial-gradient(ellipse,rgba(5,10,23,.82),transparent 72%);z-index:-1}
+.hero-art{width:min(46%,700px);height:auto;max-width:none;bottom:0}
+.hero-art.l{left:-3%;filter:drop-shadow(0 0 26px rgba(60,120,255,.8));-webkit-mask-image:linear-gradient(to right,#000 42%,transparent 98%);mask-image:linear-gradient(to right,#000 42%,transparent 98%)}
+.hero-art.r{right:-3%;filter:drop-shadow(0 0 26px rgba(255,120,30,.8));-webkit-mask-image:linear-gradient(to left,#000 42%,transparent 98%);mask-image:linear-gradient(to left,#000 42%,transparent 98%)}
+.hero h1{background:linear-gradient(180deg,#fff 25%,#8fb6ff);-webkit-background-clip:text;background-clip:text;color:transparent;filter:drop-shadow(0 0 18px rgba(60,120,255,.6))}
+.btn{box-shadow:0 0 20px rgba(29,107,255,.55)}.btn.or{box-shadow:0 0 20px rgba(255,138,31,.55)}.btn.wa{box-shadow:0 0 20px rgba(31,184,85,.5)}
+.gc.ml::before,.gc.ff::before{content:"";position:absolute;inset:0;z-index:0;pointer-events:none}
+.gc.ml::before{background:radial-gradient(60% 100% at 85% 60%,rgba(70,130,255,.55),transparent 70%)}
+.gc.ff::before{background:radial-gradient(60% 100% at 85% 60%,rgba(255,110,20,.45),transparent 70%)}
+.gc .gart:not(.bg){filter:drop-shadow(0 0 16px rgba(70,130,255,.7))}
+@media(max-width:760px){.hero{min-height:480px}.hero-art{width:70%;opacity:.3}}
