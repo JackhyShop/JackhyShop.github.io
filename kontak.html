@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kontak - Jelajah Nusantara</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .contact-wrap { max-width: 900px; margin: 0 auto; }
+    .contact-cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+      margin-bottom: 24px;
+    }
+    .contact-cards a {
+      background: var(--bg-card);
+      border: 1px solid rgba(255,255,255,.12);
+      border-radius: 14px;
+      padding: 22px 16px;
+      text-align: center;
+    }
+    .contact-cards a:hover { border-color: var(--kuning); }
+    .contact-cards h3 { color: var(--kuning); margin-bottom: 6px; font-size: 17px; }
+    .contact-cards p { font-size: 14px; color: var(--abu); word-break: break-all; }
+
+    .contact-form {
+      background: var(--bg-card);
+      border-radius: 18px;
+      padding: 28px 32px;
+    }
+    .contact-form h2 { margin-bottom: 16px; }
+    .contact-form label { display: block; font-size: 14px; margin: 14px 0 6px; color: var(--abu); }
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 12px 14px;
+      border-radius: 10px;
+      border: 1px solid rgba(255,255,255,.15);
+      background: #0b1f17;
+      color: var(--putih);
+      font-size: 15px;
+      font-family: inherit;
+    }
+    .contact-form textarea { min-height: 130px; resize: vertical; }
+    .contact-form button {
+      margin-top: 20px;
+      border: none;
+      cursor: pointer;
+      background: var(--kuning);
+      color: #000;
+      font-weight: 700;
+      padding: 12px 28px;
+      border-radius: 30px;
+      font-size: 15px;
+    }
+    @media (max-width: 900px) {
+      .contact-cards { grid-template-columns: 1fr; }
+      .contact-form { padding: 22px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header class="navbar navbar-solid">
+    <a href="index.html" class="logo">Jelajah <span>Nusantara</span></a>
+    <nav>
+      <a href="index.html">Beranda</a>
+      <a href="gunung.html">Jelajah Gunung</a>
+      <a href="kuliner.html">Jelajah Kuliner</a>
+      <a href="artikel.html">Artikel</a>
+      <a href="tentang.html">Tentang</a>
+    </nav>
+    <a href="gunung.html" class="btn-outline">Explore Sekarang →</a>
+  </header>
+
+  <!-- JUDUL HALAMAN -->
+  <section class="page-hero">
+    <h1>Kontak</h1>
+    <p>Punya saran, pertanyaan, atau ingin berbagi cerita perjalanan? Hubungi kami.</p>
+  </section>
+
+  <!-- ISI -->
+  <section class="page-section">
+    <div class="contact-wrap">
+
+      <div class="contact-cards">
+        <a href="mailto:jatisuworo20@gmail.com">
+          <h3>Email</h3>
+          <p>jatisuworo20@gmail.com</p>
+        </a>
+        <a href="https://instagram.com/slightly.dim" target="_blank" rel="noopener">
+          <h3>Instagram</h3>
+          <p>@slightly.dim</p>
+        </a>
+        <a href="https://wa.me/628123467895" target="_blank" rel="noopener">
+          <h3>WhatsApp</h3>
+          <p>0812-3456-789</p>
+        </a>
+      </div>
+
+      <form class="contact-form" action="mailto:jatisuworo20@gmail.com" method="post" enctype="text/plain">
+        <h2>Kirim Pesan</h2>
+
+        <label for="nama">Nama</label>
+        <input type="text" id="nama" name="Nama" required>
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="Email" required>
+
+        <label for="pesan">Pesan</label>
+        <textarea id="pesan" name="Pesan" required></textarea>
+
+        <button type="submit">Kirim Pesan</button>
+      </form>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="logo">Jelajah <span>Nusantara</span></div>
+    <nav>
+      <a href="index.html">Beranda</a>
+      <a href="gunung.html">Jelajah Gunung</a>
+      <a href="kuliner.html">Jelajah Kuliner</a>
+      <a href="artikel.html">Artikel</a>
+      <a href="tentang.html">Tentang</a>
+      <a href="kontak.html">Kontak</a>
+    </nav>
+    <p>© 2026 Jelajah Nusantara. Semua hak dilindungi.</p>
+  </footer>
+
+</body>
+</html>

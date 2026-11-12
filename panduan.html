@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rute &amp; Panduan - Jelajah Nusantara</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .guide-wrap { max-width: 900px; margin: 0 auto; }
+    .guide-box {
+      background: var(--bg-card);
+      border-radius: 18px;
+      padding: 28px 32px;
+      margin-bottom: 20px;
+    }
+    .guide-box h2 { margin-bottom: 14px; }
+    .guide-box ol, .guide-box ul {
+      padding-left: 22px;
+      color: var(--abu);
+      line-height: 1.9;
+    }
+    .guide-box li::marker { color: var(--kuning); }
+    .guide-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+    .guide-note {
+      font-size: 13px;
+      color: var(--abu);
+      text-align: center;
+      margin-top: 10px;
+    }
+    @media (max-width: 900px) {
+      .guide-grid { grid-template-columns: 1fr; }
+      .guide-box { padding: 22px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header class="navbar navbar-solid">
+    <a href="index.html" class="logo">Jelajah <span>Nusantara</span></a>
+    <nav>
+      <a href="index.html">Beranda</a>
+      <a href="gunung.html">Jelajah Gunung</a>
+      <a href="kuliner.html">Jelajah Kuliner</a>
+      <a href="artikel.html">Artikel</a>
+      <a href="tentang.html">Tentang</a>
+    </nav>
+    <a href="gunung.html" class="btn-outline">Explore Sekarang →</a>
+  </header>
+
+  <!-- JUDUL HALAMAN -->
+  <section class="page-hero">
+    <h1>Rute &amp; Panduan</h1>
+    <p>Langkah dan persiapan sebelum menapaki puncak.</p>
+  </section>
+
+  <!-- ISI -->
+  <section class="page-section">
+    <div class="guide-wrap">
+
+      <div class="guide-box">
+        <h2>Langkah Merencanakan Pendakian</h2>
+        <ol>
+          <li>Pilih gunung sesuai pengalamanmu. Pemula sebaiknya mulai dari gunung yang jalurnya pendek dan ramai.</li>
+          <li>Cek aturan dan jadwal buka jalur di situs atau akun resmi pengelola gunung.</li>
+          <li>Daftar atau pesan tiket pendakian lewat jalur resmi.</li>
+          <li>Pantau prakiraan cuaca beberapa hari sebelum berangkat.</li>
+          <li>Siapkan perlengkapan, logistik, dan rencana perjalanan bersama teman satu tim.</li>
+          <li>Beri tahu keluarga atau teman tentang rute dan perkiraan waktu kembali.</li>
+        </ol>
+      </div>
+
+      <div class="guide-grid">
+
+        <div class="guide-box">
+          <h2>Perlengkapan Dasar</h2>
+          <ul>
+            <li>Tas carrier dan rain cover</li>
+            <li>Sepatu dan kaos kaki untuk mendaki</li>
+            <li>Jaket hangat dan jas hujan</li>
+            <li>Senter atau headlamp, plus baterai cadangan</li>
+            <li>Tenda dan sleeping bag</li>
+            <li>Air minum, makanan, dan P3K</li>
+          </ul>
+        </div>
+
+        <div class="guide-box">
+          <h2>Etika di Gunung</h2>
+          <ul>
+            <li>Bawa turun semua sampahmu</li>
+            <li>Tetap di jalur yang sudah ada</li>
+            <li>Jangan memetik tanaman atau mengganggu satwa</li>
+            <li>Hormati adat dan kepercayaan warga setempat</li>
+            <li>Jangan memisahkan diri dari rombongan</li>
+            <li>Putar balik bila cuaca atau kondisi tubuh memburuk</li>
+          </ul>
+        </div>
+
+      </div>
+
+      <p class="guide-note">
+        Panduan ini bersifat umum. Selalu ikuti informasi terbaru dari pengelola masing-masing gunung.
+      </p>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="logo">Jelajah <span>Nusantara</span></div>
+    <nav>
+      <a href="index.html">Beranda</a>
+      <a href="gunung.html">Jelajah Gunung</a>
+      <a href="kuliner.html">Jelajah Kuliner</a>
+      <a href="artikel.html">Artikel</a>
+      <a href="tentang.html">Tentang</a>
+      <a href="kontak.html">Kontak</a>
+    </nav>
+    <p>© 2026 Jelajah Nusantara. Semua hak dilindungi.</p>
+  </footer>
+
+</body>
+</html>

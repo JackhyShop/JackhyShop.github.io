@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tentang - Jelajah Nusantara</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .about-box {
+      max-width: 800px;
+      margin: 0 auto;
+      background: var(--bg-card);
+      border-radius: 18px;
+      padding: 32px;
+      line-height: 1.8;
+      color: var(--abu);
+    }
+    .about-box h2 {
+      color: var(--putih);
+      margin-bottom: 12px;
+    }
+    .about-values {
+      max-width: 800px;
+      margin: 24px auto 0;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+    }
+    .about-values div {
+      background: var(--bg-card);
+      border: 1px solid rgba(255,255,255,.12);
+      border-radius: 14px;
+      padding: 22px 16px;
+      text-align: center;
+    }
+    .about-values h3 {
+      color: var(--kuning);
+      margin-bottom: 8px;
+      font-size: 17px;
+    }
+    .about-values p {
+      font-size: 14px;
+      color: var(--abu);
+    }
+    .about-cta {
+      text-align: center;
+      margin-top: 30px;
+    }
+    @media (max-width: 900px) {
+      .about-values { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header class="navbar navbar-solid">
+    <a href="index.html" class="logo">Jelajah <span>Nusantara</span></a>
+    <nav>
+      <a href="index.html">Beranda</a>
+      <a href="gunung.html">Jelajah Gunung</a>
+      <a href="kuliner.html">Jelajah Kuliner</a>
+      <a href="artikel.html">Artikel</a>
+      <a href="tentang.html" class="active">Tentang</a>
+    </nav>
+    <a href="gunung.html" class="btn-outline">Explore Sekarang →</a>
+  </header>
+
+  <!-- JUDUL HALAMAN -->
+  <section class="page-hero">
+    <h1>Tentang Kami</h1>
+    <p>Jelajah · Rasa · Indonesia</p>
+  </section>
+
+  <!-- ISI -->
+  <section class="page-section">
+
+    <div class="about-box">
+      <h2>Apa itu Jelajah Nusantara?</h2>
+      <p>
+        Jelajah Nusantara adalah website yang mengajak kamu mengenal keindahan Indonesia
+        dari dua sisi: puncak gunungnya dan cita rasa kulinernya. Di sini kamu bisa
+        menemukan informasi gunung-gunung populer, makanan khas berbagai daerah, serta
+        artikel tips dan cerita perjalanan.
+      </p>
+      <p style="margin-top:14px;">
+        Tujuan kami sederhana: membantu kamu merencanakan petualangan dengan lebih
+        siap, sekaligus mengenalkan kekayaan budaya Nusantara.
+      </p>
+    </div>
+
+    <div class="about-values">
+      <div>
+        <h3>Informasi Terpercaya</h3>
+        <p>Rujukan dari sumber resmi untuk perjalananmu.</p>
+      </div>
+      <div>
+        <h3>Komunitas Traveler</h3>
+        <p>Tempat berbagi cerita dan tips sesama petualang.</p>
+      </div>
+      <div>
+        <h3>Dukung UMKM Lokal</h3>
+        <p>Mengenalkan wisata dan kuliner khas daerah.</p>
+      </div>
+    </div>
+
+    <div class="about-cta">
+      <a href="gunung.html" class="btn-yellow">Mulai Menjelajah →</a>
+    </div>
+
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="logo">Jelajah <span>Nusantara</span></div>
+    <nav>
+      <a href="index.html">Beranda</a>
+      <a href="gunung.html">Jelajah Gunung</a>
+      <a href="kuliner.html">Jelajah Kuliner</a>
+      <a href="artikel.html">Artikel</a>
+      <a href="tentang.html">Tentang</a>
+      <a href="kontak.html">Kontak</a>
+    </nav>
+    <p>© 2026 Jelajah Nusantara. Semua hak dilindungi.</p>
+  </footer>
+
+</body>
+</html>
