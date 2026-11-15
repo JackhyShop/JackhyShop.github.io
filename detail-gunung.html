@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Detail Gunung - Jelajah Nusantara</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .detail-hero {
+      height: 340px;
+      background-size: cover;
+      background-position: center;
+      background-color: var(--bg-card);
+      display: flex;
+      align-items: flex-end;
+    }
+    .detail-hero-text {
+      width: 100%;
+      padding: 30px 40px;
+      background: linear-gradient(to top, rgba(0,0,0,.85), transparent);
+    }
+    .detail-hero-text h1 { font-size: 42px; }
+    .detail-wrap { max-width: 900px; margin: 0 auto; }
+    .detail-box {
+      background: var(--bg-card);
+      border-radius: 18px;
+      padding: 28px 32px;
+      margin-bottom: 20px;
+    }
+    .detail-box h2 { margin-bottom: 14px; }
+    .detail-box p { color: var(--abu); line-height: 1.8; }
+    .detail-box ul { padding-left: 22px; color: var(--abu); line-height: 1.9; }
+    .detail-box li::marker { color: var(--kuning); }
+    .info-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+    .info-item {
+      background: #0b1f17;
+      border-radius: 12px;
+      padding: 14px 16px;
+    }
+    .info-item small { display: block; color: var(--abu); font-size: 12px; }
+    .info-item strong { color: var(--kuning); font-size: 15px; }
+    .detail-note { font-size: 13px; color: var(--abu); text-align: center; margin: 10px 0 24px; }
+    .detail-back { text-align: center; }
+    @media (max-width: 900px) {
+      .detail-hero { height: 240px; }
+      .detail-hero-text { padding: 20px; }
+      .detail-hero-text h1 { font-size: 30px; }
+      .info-grid { grid-template-columns: 1fr; }
+      .detail-box { padding: 22px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header class="navbar navbar-solid">
+    <a href="index.html" class="logo">Jelajah <span>Nusantara</span></a>
+    <nav>
+      <a href="index.html">Beranda</a>
+      <a href="gunung.html" class="active">Jelajah Gunung</a>
+      <a href="kuliner.html">Jelajah Kuliner</a>
+      <a href="artikel.html">Artikel</a>
+      <a href="tentang.html">Tentang</a>
+    </nav>
+    <a href="gunung.html" class="btn-outline">Explore Sekarang →</a>
+  </header>
+
+  <!-- HERO FOTO -->
+  <section class="detail-hero" id="hero">
+    <div class="detail-hero-text">
+      <h1 id="judul">Memuat...</h1>
+    </div>
+  </section>
+
+  <!-- ISI -->
+  <section class="page-section">
+    <div class="detail-wrap" id="isi"></div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="logo">Jelajah <span>Nusantara</span></div>
+    <nav>
+      <a href="index.html">Beranda</a>
+      <a href="gunung.html">Jelajah Gunung</a>
+      <a href="kuliner.html">Jelajah Kuliner</a>
+      <a href="artikel.html">Artikel</a>
+      <a href="tentang.html">Tentang</a>
+      <a href="kontak.html">Kontak</a>
+    </nav>
+    <p>© 2026 Jelajah Nusantara. Semua hak dilindungi.</p>
+  </footer>
+
+  <script src="data-gunung.js"></script>
+  <script>
+    var id = new URLSearchParams(window.location.search).get("id");
+    var g = GUNUNG[id];
+    var isi = document.getElementById("isi");
+
+    function buatBox(judul) {
+      var box = document.createElement("div");
+      box.className = "detail-box";
+      var h = document.createElement("h2");
+      h.textContent = judul;
+      box.appendChild(h);
+      return box;
+    }
+
+    if (!g) {
+      document.getElementById("judul").textContent = "Gunung tidak ditemukan";
+      var pesan = buatBox("Maaf");
+      var p = document.createElement("p");
+      p.textContent = "Data gunung yang kamu cari belum tersedia.";
+      pesan.appendChild(p);
+      isi.appendChild(pesan);
+    } else {
+      document.title = g.nama + " - Jelajah Nusantara";
+      document.getElementById("judul").textContent = g.nama;
+      document.getElementById("hero").style.backgroundImage = "url('" + g.gambar + "')";
+
+      // Tentang
+      var boxTentang = buatBox("Tentang " + g.nama);
+      var pTentang = document.createElement("p");
+      pTentang.textContent = g.ringkas;
+      boxTentang.appendChild(pTentang);
+      isi.appendChild(boxTentang);
+
+      // Informasi singkat
+      var boxInfo = buatBox("Informasi Singkat");
+      var grid = document.createElement("div");
+      grid.className = "info-grid";
+      g.info.forEach(function (baris) {
+        var item = document.createElement("div");
+        item.className = "info-item";
+        var label = document.createElement("small");
+        label.textContent = baris[0];
+        var nilai = document.createElement("strong");
+        nilai.textContent = baris[1];
+        item.appendChild(label);
+        item.appendChild(nilai);
+        grid.appendChild(item);
+      });
+      boxInfo.appendChild(grid);
+      isi.appendChild(boxInfo);
+
+      // Tips
+      var boxTips = buatBox("Tips Pendakian");
+      var ul = document.createElement("ul");
+      g.tips.forEach(function (t) {
+        var li = document.createElement("li");
+        li.textContent = t;
+        ul.appendChild(li);
+      });
+      boxTips.appendChild(ul);
+      isi.appendChild(boxTips);
+
+      // Catatan
+      var note = document.createElement("p");
+      note.className = "detail-note";
+      note.textContent = "Informasi bersifat umum. Selalu cek aturan, status gunung, dan kondisi jalur terbaru dari pengelola resmi.";
+      isi.appendChild(note);
+    }
+
+    // Tombol kembali
+    var back = document.createElement("div");
+    back.className = "detail-back";
+    var tombol = document.createElement("a");
+    tombol.href = "gunung.html";
+    tombol.className = "btn-yellow";
+    tombol.textContent = "← Kembali ke Daftar Gunung";
+    back.appendChild(tombol);
+    isi.appendChild(back);
+  </script>
+
+</body>
+</html>
