@@ -1,4 +1,15 @@
 (function () {
+  // ===== FAVICON =====
+  if (!document.querySelector("link[rel~='icon']")) {
+    var ikon = document.createElement("link");
+    ikon.rel = "icon";
+    ikon.type = "image/svg+xml";
+    ikon.href = "favicon.svg";
+    document.head.appendChild(ikon);
+  }
+
+  // ===== GAYA MENU (hanya aktif di layar kecil) =====
+  var css = [
   // ===== GAYA MENU (hanya aktif di layar kecil) =====
   var css = [
     ".menu-toggle { display: none; background: none; border: 1.5px solid #f5b72e; color: #f5b72e; font-size: 22px; line-height: 1; padding: 6px 12px; border-radius: 10px; cursor: pointer; }",
